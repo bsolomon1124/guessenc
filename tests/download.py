@@ -8,7 +8,6 @@ import requests
 
 from tests.test_guessenc import slugify
 
-# TODO: mask user/headers
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:69.0) Gecko/20100101 Firefox/69.0",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
