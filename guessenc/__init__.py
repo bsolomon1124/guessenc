@@ -31,7 +31,9 @@ def infer_encoding(content: Optional[bytes] = None, headers: Optional[Mapping[st
         if not content:
             return Source.COULD_NOT_DETECT, None
         src, res = infer_from_content(content)
-    return src, codecs.lookup(res).name
+    if res:
+        return src, codecs.lookup(res).name
+    return Source.COULD_NOT_DETECT, None
 
 
 def infer_from_content(content: bytes) -> Pair:
