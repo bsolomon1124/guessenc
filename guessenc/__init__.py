@@ -25,6 +25,36 @@ Pair = Tuple[Source, Optional[str]]
 
 
 def infer_encoding(content: Optional[bytes] = None, headers: Optional[Mapping[str, str]] = None) -> Pair:
+    """Infer encoding from response headers and/or page content.
+
+    :param content: The page HTML (optional), such as ``response.content``.
+    :type content: bytes
+
+    :param headers: The response headers, such as ``response.headers``.
+        This should be a data structure supporting a case-insensitive
+        lookup, such as ``requests.structures.CaseInsensitiveDict``
+        or ``multidict.CIMultiDict``.
+    :type headers: Mapping[str, str]
+
+    :return: Pair of (_source_, _encoding_).  The source is a :class:`Source`
+        enum member that indicates where in the content or header the encoding
+        was detected from.  The encoding is a ``str`` representing the
+        formal codec name, or ``None`` if no encoding can be detected.
+    :rtype: Tuple[Source, Optional[str]]
+
+    Example:
+
+    >>> import requests
+    >>> resp = requests.get("http://www.fatehwatan.ps/page-183525.html")
+    >>> resp.raise_for_status()
+    >>> infer_encoding(resp.content, resp.headers)
+    (<Source.META_HTTP_EQUIV: 2>, 'cp1256')
+
+    This tells us that the detected encoding is cp1256, and that it
+    was retrieved from a <meta> HTML tag with
+    ``http-equiv='Content-Type'``.
+    """
+
     headers = headers or {}
     src, res = infer_from_headers(headers)
     if not res:
