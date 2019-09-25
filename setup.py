@@ -19,7 +19,7 @@ if __name__ == "__main__":
         license="MIT",
         keywords="encoding http html chardet detection",
         url="https://github.com/bsolomon1124/guessenc",
-        long_description=open(os.path.join(here, 'README.md'), encoding='utf-8').read(),
+        long_description=open(os.path.join(here, "README.md"), encoding="utf-8").read(),
         long_description_content_type="text/markdown",
         install_requires=["lxml", "chardet"],
         packages=["guessenc"],
@@ -27,7 +27,6 @@ if __name__ == "__main__":
         python_requires=[">=3.5"],
         classifiers=[
             "Intended Audience :: Developers",
-
             "Development Status :: 3 - Alpha",
             "License :: OSI Approved :: MIT License",
             "Programming Language :: Python :: 3 :: Only",
