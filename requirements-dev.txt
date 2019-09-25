@@ -1,8 +1,6 @@
 pytest
-black
 flake8
 requests
-Sphinx
 twine
 wheel
 mypy
