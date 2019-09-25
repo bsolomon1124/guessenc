@@ -24,7 +24,7 @@ if __name__ == "__main__":
         install_requires=["lxml", "chardet"],
         packages=["guessenc"],
         tests_require=["pytest"],
-        python_requires=[">=3.5"],
+        python_requires=">=3.5",
         classifiers=[
             "Intended Audience :: Developers",
             "Development Status :: 3 - Alpha",
