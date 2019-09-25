@@ -1,7 +1,7 @@
 """Guess encoding from response headers and/or page content."""
 
 __all__ = ("infer_encoding",)
-__version__ = "0.1"
+__version__ = "0.2"
 
 import codecs
 import enum
