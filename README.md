@@ -1,5 +1,10 @@
 # guessenc
 
+[![License](https://img.shields.io/github/license/bsolomon1124/guessenc.svg)](https://github.com/bsolomon1124/guessenc/blob/master/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/guessenc.svg)](https://pypi.org/project/guessenc/)
+[![Status](https://img.shields.io/pypi/status/guessenc.svg)](https://pypi.org/project/guessenc/)
+[![Python](https://img.shields.io/pypi/pyversions/guessenc.svg)](https://pypi.org/project/guessenc)
+
 Infer HTML encoding from response headers &amp; content.  Goes above and beyond the encoding detection done by most HTTP client libraries.
 
 ## Basic Usage
