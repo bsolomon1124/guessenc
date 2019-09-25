@@ -122,4 +122,7 @@ def parse_mimetype_charset_param(mimetype: str) -> Optional[str]:
             pass
         if key.casefold().strip() == "charset":
             return value.strip(" \"'")
+    if parts[0] == "application/json":
+        # RFC 7159: default JSON encoding is UTF-8
+        return "utf-8"
     return None

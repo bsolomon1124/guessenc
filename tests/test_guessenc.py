@@ -115,6 +115,12 @@ data = [
         (Source.CHARSET_HEADER, codecs.lookup("utf-8").name),
         (Source.CHARSET_HEADER, codecs.lookup("utf-8").name),
     ),
+    (
+        "https://api.gdeltproject.org/api/v2/doc/doc?mode=artList&format=JSON&maxrecords=10&query=Litvinenko",
+        (Source.COULD_NOT_DETECT, None),
+        (Source.CHARSET_HEADER, codecs.lookup("utf-8").name),
+        (Source.CHARSET_HEADER, codecs.lookup("utf-8").name),
+    ),
 ]
 
 
