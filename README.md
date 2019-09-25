@@ -1,5 +1,6 @@
 # guessenc
 
+[![Build](https://img.shields.io/circleci/project/github/bsolomon1124/guessenc.svg)](https://circleci.com/gh/bsolomon1124/guessenc/tree/master)
 [![License](https://img.shields.io/pypi/l/guessenc)](https://github.com/bsolomon1124/guessenc/blob/master/LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/guessenc.svg)](https://pypi.org/project/guessenc/)
 [![Status](https://img.shields.io/pypi/status/guessenc.svg)](https://pypi.org/project/guessenc/)
