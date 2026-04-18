@@ -1,13 +1,16 @@
 import os
+import re
+
 from setuptools import setup
 
-from guessenc import __version__
-
 # PyPI:
-# $ python setup.py sdist bdist_wheel
-# $ twine upload dist/guessenc-x.y
+# $ python -m build
+# $ twine upload dist/guessenc-x.y*
 
 here = os.path.abspath(os.path.dirname(__file__))
+
+with open(os.path.join(here, "guessenc", "__init__.py"), encoding="utf-8") as f:
+    __version__ = re.search(r'^__version__\s*=\s*"([^"]+)"', f.read(), re.M).group(1)
 
 if __name__ == "__main__":
     setup(
