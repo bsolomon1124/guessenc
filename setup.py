@@ -15,7 +15,7 @@ if __name__ == "__main__":
         version=__version__,
         author="Brad Solomon",
         author_email="brad.solomon.1124@gmail.com",
-        description="Infer HTML encoding from response headers & content",
+        description="[DEPRECATED] Infer HTML encoding from response headers & content. Use charset-normalizer or bs4.UnicodeDammit instead.",
         license="MIT",
         keywords="encoding http html chardet detection",
         url="https://github.com/bsolomon1124/guessenc",
@@ -27,7 +27,7 @@ if __name__ == "__main__":
         python_requires=">=3.5",
         classifiers=[
             "Intended Audience :: Developers",
-            "Development Status :: 3 - Alpha",
+            "Development Status :: 7 - Inactive",
             "License :: OSI Approved :: MIT License",
             "Programming Language :: Python :: 3 :: Only",
             "Programming Language :: Python :: 3",
