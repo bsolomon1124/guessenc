@@ -7,7 +7,7 @@ instead.
 """
 
 __all__ = ("infer_encoding",)
-__version__ = "0.3"
+__version__ = "0.3.1"
 
 import codecs
 import enum
