@@ -1,14 +1,29 @@
-"""Guess encoding from response headers and/or page content."""
+"""Guess encoding from response headers and/or page content.
+
+DEPRECATED: this package is no longer maintained. Use ``charset-normalizer``
+(the default encoding detector in modern ``requests`` and ``httpx``) or
+``bs4.UnicodeDammit`` (which also handles HTML ``<meta>`` tag sniffing)
+instead.
+"""
 
 __all__ = ("infer_encoding",)
-__version__ = "0.2"
+__version__ = "0.3"
 
 import codecs
 import enum
+import warnings
 from typing import Mapping, Optional, Tuple
 
 import chardet
 import lxml.html
+
+warnings.warn(
+    "guessenc is deprecated and no longer maintained. "
+    "Use charset-normalizer (built into modern requests/httpx) or "
+    "bs4.UnicodeDammit instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)
 
 
 class Source(enum.Enum):

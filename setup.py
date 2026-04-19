@@ -1,13 +1,16 @@
 import os
+import re
+
 from setuptools import setup
 
-from guessenc import __version__
-
 # PyPI:
-# $ python setup.py sdist bdist_wheel
-# $ twine upload dist/guessenc-x.y
+# $ python -m build
+# $ twine upload dist/guessenc-x.y*
 
 here = os.path.abspath(os.path.dirname(__file__))
+
+with open(os.path.join(here, "guessenc", "__init__.py"), encoding="utf-8") as f:
+    __version__ = re.search(r'^__version__\s*=\s*"([^"]+)"', f.read(), re.M).group(1)
 
 if __name__ == "__main__":
     setup(
@@ -15,7 +18,7 @@ if __name__ == "__main__":
         version=__version__,
         author="Brad Solomon",
         author_email="brad.solomon.1124@gmail.com",
-        description="Infer HTML encoding from response headers & content",
+        description="[DEPRECATED] Infer HTML encoding from response headers & content. Use charset-normalizer or bs4.UnicodeDammit instead.",
         license="MIT",
         keywords="encoding http html chardet detection",
         url="https://github.com/bsolomon1124/guessenc",
@@ -27,7 +30,7 @@ if __name__ == "__main__":
         python_requires=">=3.5",
         classifiers=[
             "Intended Audience :: Developers",
-            "Development Status :: 3 - Alpha",
+            "Development Status :: 7 - Inactive",
             "License :: OSI Approved :: MIT License",
             "Programming Language :: Python :: 3 :: Only",
             "Programming Language :: Python :: 3",

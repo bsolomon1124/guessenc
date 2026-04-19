@@ -1,6 +1,10 @@
 # guessenc
 
-[![Build](https://img.shields.io/circleci/project/github/bsolomon1124/guessenc.svg)](https://circleci.com/gh/bsolomon1124/guessenc/tree/master)
+> **Archived / deprecated.** This project is no longer maintained. Most of what it does is now well covered by
+> [`charset-normalizer`](https://github.com/jawah/charset_normalizer) (the default encoding detector in modern `requests`
+> and `httpx`) and by [`bs4.UnicodeDammit`](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#unicode-dammit),
+> which also handles HTML `<meta>` tag sniffing. Please use those instead.
+
 [![License](https://img.shields.io/pypi/l/guessenc)](https://github.com/bsolomon1124/guessenc/blob/master/LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/guessenc.svg)](https://pypi.org/project/guessenc/)
 [![Status](https://img.shields.io/pypi/status/guessenc.svg)](https://pypi.org/project/guessenc/)
